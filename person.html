@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="per.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color:#fafafa;">
+    <div class="na">
+    <header>
+        <div class="logo">
+            <a href="#"><img src="Untitled design (3).png" ></a>
+        </div>
+                    <button class="b pic"><i class="fa-regular fa-circle-question me-8"></i></button>
+                    <button class="b pic" onclick="toggleMenu()">
+                        <i class="fa-regular fa-circle-user me-8"></i>
+                    </button> 
+                    <div class="sub-menu-wrap" id="submenu">
+                        <div class="sub-menu">
+                            <div class="user-info" id="user-info">
+                                <img src="images.jpg" class="rounded-circle" id="user-image" >
+                                <!-- <img src="images.jpg" class="rounded-circle" id="user-image"> -->
+                                <p id="user-name"></p>
+                                <p id="user-email"></p>
+                                <hr>
+                            </div> 
+                                    <div class="link" style="background-color:white;">
+                                        <button id="generalButton"><i class="fa-regular fa-circle-user me-8"></i><p>General information</p>
+                                        </button>
+                                        <button onclick="goToPage('security.html')"><i class="fa-solid fa-shield"></i><p>Security</p></button>
+                                        <button class="view-modal" onclick="togglePopup()"><i class="fa-solid fa-share-nodes"></i><p>Invite a friend</p></button>
+                                        <div class="popup">
+                                            <header>
+                                              <span style="margin-left: 140px;">Share</span>
+                                              <div class="close">
+                                                  <i class="fa-solid fa-x" style="margin-left: 3px;"></i>
+                                                </div>
+                                            </header>
+                                            <div class="content">
+                                                <p style="margin-left: -3px;">Invite friend via</p>
+                                                <ul class="icons">
+                                                    <a href="#" id="facebook-link"><i class="fab fa-facebook-f"></i></a>
+                                                    <a href="#" id="twitter-link"><i class="fab fa-twitter"></i></a>
+                                                    <a href="#" id="email-link"><i class="fa-solid fa-envelope"></i></a>
+                                                    <a href="#" id="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                                    <a href="#" id="telegram-link"><i class="fab fa-telegram-plane"></i></a>
+                                                </ul>                                                
+                                                <p style=" text-align: center;">or copy link</p>
+                                                <div class="field">
+                                                 <i class="fa-regular fa-copy"></i>
+                                                  <input type="text" readonly value="share-link" s>
+                                                  <button>Copy</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <button onclick="goToPage('down.html')"><i class="fa-brands fa-google-play"></i><p>Download app</p></button>
+                                        <button onclick="openRatingBox()"><i style="left:-4px" class="fa-regular fa-star"></i><p>Rate us</p></button>
+                                        <div id="ratingBox" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border: 2px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 9999;">
+                                            <h4 style="color: #C39126; margin-bottom: -10px;">Please Rate Us</h4>
+                                            <div class="rating">
+                                                <input type="radio" id="star5" name="rating" value="5" onclick="saveRating(this)">
+                                                <label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" onclick="saveRating(this)">
+                                                <label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" onclick="saveRating(this)">
+                                                <label for="star3"></label>
+                                                <input type="radio" id="star2" name="rating" value="2" onclick="saveRating(this)">
+                                                <label for="star2"></label>
+                                                <input type="radio" id="star1" name="rating" value="1" onclick="saveRating(this)">
+                                                <label for="star1"></label>
+                                            </div>
+                                            <button onclick="closeRatingBox()" style="color: white; width:70px; background-color: #C39126; border-radius: 10px;">Close</button>
+                                        </div>
+                                        <button onclick="goToPage('about.html')"><i style="margin-left:3px;" class="fa-solid fa-exclamation"></i><p style="margin-left:12px;">About us</p></button>
+                                        <!-- <button onclick="goToPage('help.html')"><i class="fa-regular fa-circle-question"></i><p>Help</p></button> -->
+                                        <hr>
+                                     <button id="signOutButton"><p style="margin-right: 10px;">Sign Out</p><i class="fa-solid fa-right-from-bracket"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+    </header> </div><br>
+    <div class="con">
+        <div class="main">
+            <div class="row">
+                <div class="col-sm-4 mt-1">
+                    <div class="card justify-content-center">
+                        <p style="margin-bottom: -2px;text-align: center;">Basic Information</p>
+                        <img src="4042356.png" class="rounded-circle" id="placeholder-image" style="justify-content: center;  display:block;">
+                        <button id="uploadButton"><i class="fa-solid fa-cloud-arrow-up" style="margin-bottom: -12px; margin-right: 2px;  display: flex;"></i></button>
+                        <p style="text-align: center; margin-bottom: 2px; margin-top:-5px;">Upload</p>
+                        <!-- <button ><i class="fa-solid fa-cloud-arrow-up" style="margin-bottom: -12px; margin-right: 2px;"></i></button><p style="text-align: center; margin-bottom: 2px; margin-top:-5px;">Upload</p> -->
+                    </div>
+                </div>        
+                <div class="col-md-4 mt-1"> 
+                    <form class="fo1" id="userForm1">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Name</label><br>
+                        <input type="text"  id="name" name="name"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Change E-mail Address</label><br>
+                        <input type="email" id="email" name="email"><br>
+                       <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Gender</label><br>
+                        <input type="text" id="gender" name="gender"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Location</label><br>
+                        <input type="text" id="location" name="location"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Phone Number</label><br>
+                        <input type="number" id="phoneNumber" name="phoneNumber"><br>
+                    </form></div>
+                <div class="col-md-4 mt-1"> 
+                    <form class="fo" id="userForm2">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Nationality</label><br>
+                        <input type="text" id="nationality" name="nationality"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Date of Birth</label><br>
+                        <input type="text" style="width:199px;"id="dateOfBirth" name="dateOfBirth" ><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Website URL</label><br>
+                        <input type="url" id="websiteURL" name="websiteURL"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Company</label><br>
+                        <input type="text" id="company" name="company"><br>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <label>Other Website</label><br>
+                        <input type="url" id="otherWebsite" name="otherWebsite"><br>
+                    <button id="discardButton" style="margin-right: 10px; border: none;
+                    width: 120px;
+                    outline: none;
+                    color: #fff;
+                    font-weight:100;
+                    background:#c39126;
+                    border-radius: 30px; 
+                    margin-top: 6px;;">Discard</button>
+                    <button id="saveButton" style="margin-left: 10px; border: none;
+                    width: 120px;
+                    outline: none;
+                    margin-top: 6px;
+                    color: #fff;
+                    font-weight:100;
+                    background:#c39126;
+                    border-radius: 30px">Save changes</button>                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="f" class="container" style="text-align: center;">
+                <img src="IMG_20240313_141307.jpg" width="170px" style="background-color: #fafafa;">
+                    <ul>
+                        <li> <a href="" class="light">Home</a></li>
+                        <li> <a href="" class="light">Pages</a></li>
+                        <li> <a href="" class="light">Our Team</a></li>
+                        <li> <a href="" class="light">Contact</a></li>
+                        <li> <a href="" class="light">About Us</a></li>
+                    </ul>
+                <p style="font-weight: 600; color: #C39126; margin-top:-23px;">For better experience , download our mobile app</p>
+                <p style="color: #C39126; margin-top:-20px;">Download the app by clicking the link below :</p>
+                <div class="parent d-flex justify-content-center">
+                    <div class="child1"  style="margin-top:-20px;">
+                        <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM (2).jpeg" alt="" width="150px">
+                    </div>
+                    <div class="child2" style=" margin-top:-20px;">
+                        <img src="WhatsApp Image 2024-04-08 at 1.49.19 AM.jpeg" alt="" width="150px" style="margin-top: 7px;">
+                    </div>
+                </div>
+                <hr width="50%" style="margin-left: 25%; margin-top:1px; ">
+                <p style="color: #C39126; margin-top:-10px;">All copyrights are reserved by 2024 seniors</p>
+            </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="per.js"></script>
+    <!-- <script>
+        function toggleMenu() {
+        var submenu = document.getElementById("submenu");
+        submenu.classList.toggle("open-menu"); // إضافة/إزالة فئة .open-menu
+    }
+    </script>
+    <script>
+        document.getElementById('discardButton').addEventListener('click', function() {
+            // قم بتحديد العناصر التي تحتوي على البيانات التي ترغب في مسحها
+            const inputsToClear = document.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="url"]');
+            
+            // قم بمسح القيم المدخلة في العناصر
+            inputsToClear.forEach(function(input) {
+                input.value = '';
+            });
+        });
+    </script>
+    <script>
+    function updateUserDetails() {
+    var userName = document.getElementById("user-name-input").value;
+    var userEmail = document.getElementById("user-email-input").value;
+    var userImage = document.getElementById("user-image-input").value;
+
+    // Check if all fields are filled
+    if (userName && userEmail && userImage) {
+        // Update user details
+        document.getElementById("user-name").innerText = userName;
+        document.getElementById("user-email").innerText = userEmail;
+        document.getElementById("user-image").src = userImage;
+
+        // Show the submenu
+        document.getElementById("submenu").style.display = "block";
+
+        // Hide the input fields after updating
+        document.getElementById("user-name-input").style.display = "none";
+        document.getElementById("user-email-input").style.display = "none";
+        document.getElementById("user-image-input").style.display = "none";
+
+        // Show the sub-menu
+        document.querySelector(".sub-menu").style.display = "block";
+    } else {
+        // Hide the submenu if any field is empty
+        document.getElementById("submenu").style.display = "none";
+        // Hide the sub-menu
+        document.querySelector(".sub-menu").style.display = "none";
+    }
+}
+    </script>
+    <script>
+        function discardChanges() {
+    // Implement your logic to revert changes here
+    alert("Changes have been discarded.");
+}
+
+// Add an event listener to the "Discard" button
+document.getElementById("discardButton").addEventListener("click", function() {
+    discardChanges();
+});
+function saveChanges() {
+    // Implement your logic to save changes here
+    alert("Changes have been saved.");
+}
+
+// Add an event listener to the "Save changes" button
+document.getElementById("saveButton").addEventListener("click", function() {
+    saveChanges();
+});
+    </script>
+    <script>
+        document.getElementById("signOutButton").addEventListener("click", function() {
+            // Perform sign out action here
+            alert("You have been signed out!");
+            // You can redirect the user to the logout page or perform any other necessary actions here
+        });
+        </script> -->
+</body>
+</html>
